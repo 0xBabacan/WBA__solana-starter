@@ -20,7 +20,6 @@ umi.use(signerIdentity(signer));
 
 (async () => {
     try {
-        // Start here
         let accounts: CreateMetadataAccountV3InstructionAccounts = {
             mint,
             mintAuthority: signer,

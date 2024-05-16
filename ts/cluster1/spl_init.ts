@@ -17,12 +17,13 @@ const connection = new Connection("https://api.devnet.solana.com", commitment);
 
 (async () => {
     try {
+        // Create a Mint Account address
         const mint = await createMint(
             connection,
-            keypair,    // payer, signer
-            keypair.publicKey,  // mintAuthority
-            null,       // freezeAuthority
-            6           // decimals
+            keypair,    //payer
+            keypair.publicKey,  //mintAuthority
+            null,       //freezeAuthority
+            6           //decimals
         )
         console.log(`mint address is: ${mint.toBase58()}`);
     } catch(error) {
